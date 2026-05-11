@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Il Gatto e la Volpe — Menu Mobile</title>
+<style>
+:root{
+  --bg:#f5f5f3;
+  --card:#ffffff;
+  --text:#111111;
+  --muted:#6d6d6d;
+  --line:#e9e6df;
+  --accent:#161616;
+  --cream:#fffbe8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+.app{max-width:780px;margin:0 auto;padding-bottom:40px}
+.hero{padding:28px 20px 18px;background:linear-gradient(180deg,#fbfaf6 0%,#f1efe9 100%);border-bottom:1px solid var(--line)}
+.brand-box{background:var(--cream);border:1px solid #ded8c6;border-radius:18px;padding:18px 16px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.brand-title{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:30px;line-height:1.1;color:#8f8aa8;margin-bottom:8px}
+.brand-mark{font-family:Georgia,"Times New Roman",serif;font-size:56px;line-height:1;color:#b2afc8;margin:8px 0 10px}
+.brand-info{font-size:14px;font-weight:700;line-height:1.55}
+.sticky-nav{position:sticky;top:0;z-index:50;background:rgba(245,245,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.scroller{display:flex;gap:10px;overflow:auto;padding:12px 14px 12px 14px;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.2px}
+.main{padding:16px 14px 0}
+.section{margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.03)}
+.section-head{padding:16px 16px 10px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#fcfcfa 100%)}
+.kicker{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--muted);letter-spacing:.9px;margin-bottom:4px}
+.section h2{margin:0;font-size:24px;line-height:1.05;font-weight:900;text-transform:uppercase;letter-spacing:.2px}
+.section h2 .script{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;text-transform:none;font-size:20px;margin-left:6px}
+.section-body{padding:10px 14px 12px}
+.subgroup{padding:8px 2px 2px}
+.subgroup + .subgroup{margin-top:8px;border-top:1px solid var(--line);padding-top:14px}
+.subgroup h3{margin:0 0 10px;font-size:16px;line-height:1.1;font-weight:900;text-transform:uppercase;letter-spacing:.2px}
+.item{padding:8px 0}
+.item + .item{border-top:1px dashed #ece8df}
+.row{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.name{font-size:14px;line-height:1.2;font-weight:800;text-transform:uppercase;flex:1;min-width:0}
+.price{font-size:14px;line-height:1.2;font-weight:900;white-space:nowrap}
+.desc{margin-top:3px;font-size:11.5px;line-height:1.35;color:var(--muted);text-transform:uppercase;font-weight:700}
+.note{padding:12px 14px 14px;border-top:1px solid var(--line);font-size:11px;line-height:1.45;color:#333;text-transform:uppercase;font-weight:800;background:#fcfcfa}
+.dual-head{display:flex;justify-content:flex-end;gap:30px;margin:-2px 0 8px;font-size:10px;text-transform:uppercase;color:var(--muted);font-weight:800}
+.dual-price{display:flex;gap:18px;white-space:nowrap}
+.wine-intro{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fcfcfa;margin-bottom:12px}
+.wine-title{font-size:34px;line-height:.95;font-weight:900;text-transform:uppercase;margin:0 0 12px}
+.wine-copy{font-size:13px;line-height:1.5;color:#474747;margin:0 0 10px}
+.legend{font-size:11px;line-height:1.5;color:#666}
+.footnote{font-size:10.5px;line-height:1.45;color:#777;margin-top:12px}
+.footer-space{height:20px}
+@media (min-width:700px){
+  .main{padding:18px}
+  .section-body.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .section-body.grid-2 .subgroup + .subgroup{margin-top:0;border-top:none;padding-top:8px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <div class="brand-box">
+      <div class="brand-title">Il Gatto e la Volpe</div>
+      <div class="brand-mark">2</div>
+      <div class="brand-info">
+        Pizzeria “Il Gatto e la Volpe”<br>
+        Via delle Lampare nr. 2/B/C/D<br>
+        Per info e prenotazioni<br>
+        375.9350647 – 331.4348888
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky-nav">
+    <div class="scroller">
+      <a class="chip" href="#fritti">Fritti</a>
+      <a class="chip" href="#classiche">Classiche</a>
+      <a class="chip" href="#speciali">Speciali</a>
+      <a class="chip" href="#panuozzi">Panuozzi</a>
+      <a class="chip" href="#burger">Burger</a>
+      <a class="chip" href="#primi">Primi</a>
+      <a class="chip" href="#dolci">Dolci</a>
+      <a class="chip" href="#bibite">Bibite</a>
+      <a class="chip" href="#amari">Amari</a>
+      <a class="chip" href="#vini">Vini</a>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <section class="section" id="fritti">
+      <div class="section-head"><div class="kicker">1</div><h2>Fritti e Antipasti</h2></div>
+      <div class="section-body grid-2">
+        <div class="subgroup">
+          <h3>I Fritti</h3>
+          <div class="item"><div class="row"><div class="name">Crocchetta</div><div class="price">€ 2,50</div></div><div class="desc">Patate, provola, pepe e prezzemolo</div></div>
+          <div class="item"><div class="row"><div class="name">Supplì Classico</div><div class="price">€ 2,50</div></div><div class="desc">Riso, sugo di pomodoro, fior di latte e parmigiano</div></div>
+          <div class="item"><div class="row"><div class="name">Supplì Cacio e Pepe</div><div class="price">€ 3,00</div></div><div class="desc">Riso, pecorino romano e pepe nero</div></div>
+          <div class="item"><div class="row"><div class="name">Supplì all’Amatriciana</div><div class="price">€ 3,00</div></div><div class="desc">Riso, pomodoro, pecorino romano e guanciale</div></div>
+          <div class="item"><div class="row"><div class="name">Supplì alla Carbonara</div><div class="price">€ 3,00</div></div><div class="desc">Riso, uova, pecorino romano e guanciale</div></div>
+          <div class="item"><div class="row"><div class="name">Montanara Classica</div><div class="price">€ 3,00</div></div><div class="desc">Pizza fritta con pomodoro, parmigiano e basilico</div></div>
+          <div class="item"><div class="row"><div class="name">Montanara Margherita</div><div class="price">€ 3,50</div></div><div class="desc">Pizza fritta con pomodoro, mozzarella di bufala e basilico</div></div>
+          <div class="item"><div class="row"><div class="name">Pizza Fritta Special</div><div class="price">€ 3,50</div></div><div class="desc">Pizza fritta con scarola e acciughe</div></div>
+          <div class="item"><div class="row"><div class="name">Calzoncino Fritto Classico</div><div class="price">€ 3,50</div></div><div class="desc">Calzone fritto, pomodoro e fior di latte</div></div>
+          <div class="item"><div class="row"><div class="name">Calzoncino Fritto Special</div><div class="price">€ 4,00</div></div><div class="desc">Calzone fritto, ricotta e mortadella</div></div>
+          <div class="item"><div class="row"><div class="name">Zeppole Cilentane</div><div class="price">€ 4,00</div></div><div class="desc">Pasta cresciuta, fiori di zucca alici</div></div>
+          <div class="item"><div class="row"><div class="name">Patatine Sticks</div><div class="price">€ 3,00</div></div><div class="desc">Porzione</div></div>
+          <div class="item"><div class="row"><div class="name">Patatine Chips</div><div class="price">€ 3,50</div></div><div class="desc">Porzione</div></div>
+          <div class="item"><div class="row"><div class="name">Patatine Chips Cacio e Pepe</div><div class="price">€ 4,00</div></div><div class="desc">Porzione</div></div>
+          <div class="item"><div class="row"><div class="name">Frittatina Pasta, Patata e Provola</div><div class="price">€ 4,00</div></div><div class="desc">Pasta, patate, provola e pangrattato</div></div>
+          <div class="item"><div class="row"><div class="name">Frittatina di Pasta</div><div class="price">€ 4,00</div></div><div class="desc">Pasta, besciamella, parmigiano, piselli uova e pangrattato</div></div>
+        </div>
+        <div class="subgroup">
+          <h3>I Nostri Antipasti</h3>
+          <div class="item"><div class="row"><div class="name">Tagliere Il Gatto e la Volpe</div><div class="price">€ 10,00</div></div><div class="desc">Formaggi, salumi e mozzarella di bufala</div></div>
+          <div class="item"><div class="row"><div class="name">Crudo e Mozzarella di Bufala</div><div class="price">€ 9,00</div></div><div class="desc">Mozzarella di bufala DOP 125g e crudo</div></div>
+          <div class="item"><div class="row"><div class="name">Parmigiana</div><div class="price">€ 9,00</div></div><div class="desc">Pomodoro, mozzarella, fior di latte, basilico, parmigiano e melanzana</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="classiche">
+      <div class="section-head"><div class="kicker">2</div><h2>Le Pizze <span class="script">Classiche</span></h2></div>
+      <div class="section-body">
+        <div class="item"><div class="row"><div class="name">Focaccia</div><div class="price">€ 6,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Marinara</div><div class="price">€ 7,50</div></div><div class="desc">Pomodoro, alici, origano, aglio e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Cilentana</div><div class="price">€ 7,00</div></div><div class="desc">Pomodoro, parmigiano, basilico e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Rossa</div><div class="price">€ 6,50</div></div><div class="desc">Pomodoro e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Margherita</div><div class="price">€ 8,00</div></div><div class="desc">Pomodoro, mozzarella, basilico e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Margherita con Funghi</div><div class="price">€ 9,50</div></div><div class="desc">Pomodoro, mozzarella, funghi, basilico e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Napoli</div><div class="price">€ 9,50</div></div><div class="desc">Pomodoro, fior di latte, alici di Cetara e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Bufalina</div><div class="price">€ 9,00</div></div><div class="desc">Pomodoro, mozzarella di bufala campana, basilico fresco e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Panzacchiona</div><div class="price">€ 10,00</div></div><div class="desc">Pomodoro, fior di latte, wurstel e patatine fritte e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Ludovica (Diavola)</div><div class="price">€ 9,00</div></div><div class="desc">Pomodoro, mozzarella, salame piccante e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Crostino</div><div class="price">€ 8,50</div></div><div class="desc">Mozzarella e prosciutto cotto</div></div>
+        <div class="item"><div class="row"><div class="name">Fiori di Zucca e Alici</div><div class="price">€ 10,50</div></div><div class="desc">Fiori di zucca, fior di latte, alici e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Boscaiola (a richiesta bianca o rossa)</div><div class="price">€ 10,50</div></div><div class="desc">Pomodoro, fior di latte, funghi, salsiccia e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Parmigiana</div><div class="price">€ 9,50</div></div><div class="desc">Fior di latte, pomodoro, basilico, melanzane, parmigiano e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Patate e Salsiccia</div><div class="price">€ 9,50</div></div><div class="desc">Fior di latte, patate al forno, salsiccia e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Ortolana</div><div class="price">€ 11,50</div></div><div class="desc">Fior di latte, melanzane, zucchine, pomodorini, funghi champignon, peperoni</div></div>
+        <div class="item"><div class="row"><div class="name">Cosacca</div><div class="price">€ 9,50</div></div><div class="desc">Pomodoro, datterini, parmigiano, basilico e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Tonno e Cipolla</div><div class="price">€ 10,00</div></div><div class="desc">Pomodoro, fior di latte, tonno e cipolla</div></div>
+        <div class="item"><div class="row"><div class="name">Capricciosa</div><div class="price">€ 12,00</div></div><div class="desc">Fior di latte, pomodoro, p. crudo, champignon, olive, carciofi, uova sode, basilico</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="speciali">
+      <div class="section-head"><div class="kicker">3</div><h2>Le Pizze <span class="script">Speciali</span></h2></div>
+      <div class="section-body">
+        <div class="item"><div class="row"><div class="name">Spacca Napoli</div><div class="price">€ 12,50</div></div><div class="desc">Salsiccia, broccoletti, provola e pepe nero</div></div>
+        <div class="item"><div class="row"><div class="name">Bella Napoli</div><div class="price">€ 12,50</div></div><div class="desc">Fior di latte, ricotta, zucchine e salame piccante</div></div>
+        <div class="item"><div class="row"><div class="name">Bufala e Pachino o Francesca</div><div class="price">€ 12,50</div></div><div class="desc">Mozzarella di bufala DOP, pomodorini, basilico, origano e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Posillipo</div><div class="price">€ 14,50</div></div><div class="desc">Fior di latte, salmone affumicato, stracciatella e rucola</div></div>
+        <div class="item"><div class="row"><div class="name">Mergellina</div><div class="price">€ 14,00</div></div><div class="desc">Mortadella, burrata e pesto di pistacchi</div></div>
+        <div class="item"><div class="row"><div class="name">Toledo</div><div class="price">€ 14,50</div></div><div class="desc">Fior di latte, pancetta, patate al forno, provola e crema al tartufo</div></div>
+        <div class="item"><div class="row"><div class="name">Puntarelle Special n.d.</div><div class="price">€ 14,00</div></div><div class="desc">Burrata, puntarelle e alici</div></div>
+        <div class="item"><div class="row"><div class="name">Amatriciana</div><div class="price">€ 11,50</div></div><div class="desc">Pomodoro, pecorino romano e guanciale</div></div>
+        <div class="item"><div class="row"><div class="name">Insolita</div><div class="price">€ 13,00</div></div><div class="desc">Burrata, alici e zest di limone</div></div>
+        <div class="item"><div class="row"><div class="name">Quattro Formaggi</div><div class="price">€ 12,00</div></div><div class="desc">Gorgonzola, parmigiano, cheddar, fior di latte e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">O' Monaciello</div><div class="price">€ 12,50</div></div><div class="desc">Gorgonzola, parmigiano, cheddar, salame piccante, fior di latte e olio evo</div></div>
+        <div class="item"><div class="row"><div class="name">Mediterranea</div><div class="price">€ 12,50</div></div><div class="desc">Fior di latte, datterino giallo, tonno, capperi, olive taggiasche, olio e basilico</div></div>
+        <div class="item"><div class="row"><div class="name">Il Gatto e la Volpe</div><div class="price">€ 14,00</div></div><div class="desc">Fior di latte, melanzane, datterino rosso, cacioricotta di bufala affumicata</div></div>
+        <div class="item"><div class="row"><div class="name">Fresca</div><div class="price">€ 12,50</div></div><div class="desc">Fior di latte, rucola, bresaola, pomodorino e scaglie di parmigiano</div></div>
+        <div class="item"><div class="row"><div class="name">Crocchè</div><div class="price">€ 13,50</div></div><div class="desc">Fior di latte, prosciutto cotto, crocchette di patate e basilico</div></div>
+      </div>
+      <div class="note">A richiesta con mozzarella senza lattosio (costo aggiuntivo di € 1,50) · A richiesta con burrata (costo aggiuntivo di € 2,50)</div>
+    </section>
+
+    <section class="section" id="panuozzi">
+      <div class="section-head"><div class="kicker">4</div><h2>Panuozzi e Calzoni</h2></div>
+      <div class="section-body grid-2">
+        <div class="subgroup">
+          <h3>I Panuozzi</h3>
+          <div class="item"><div class="row"><div class="name">Don Carmine</div><div class="price">€ 12,00</div></div><div class="desc">Fior di latte, melanzane e cotto</div></div>
+          <div class="item"><div class="row"><div class="name">Donna Raffaella</div><div class="price">€ 12,00</div></div><div class="desc">Scarola ripassata, olive, capperi, acciughe e fior di latte</div></div>
+          <div class="item"><div class="row"><div class="name">Don Peppe</div><div class="price">€ 13,00</div></div><div class="desc">Fior di latte, salsiccia, peperoni, provola e patate</div></div>
+          <div class="item"><div class="row"><div class="name">Don Pierluigi</div><div class="price">€ 12,00</div></div><div class="desc">Provola, broccoli e salsiccia</div></div>
+          <div class="item"><div class="row"><div class="name">Don Damiano</div><div class="price">€ 12,00</div></div><div class="desc">Rucola, mozzarella di bufala, prosciutto crudo, pomodori secchi</div></div>
+          <div class="item"><div class="row"><div class="name">Donna Margherita</div><div class="price">€ 12,00</div></div><div class="desc">Melanzane alla parmigiana, prosciutto crudo e fior di latte</div></div>
+          <div class="item"><div class="row"><div class="name">Don Panuozzo</div><div class="price">€ 12,00</div></div><div class="desc">Fior di latte e salame piccante</div></div>
+        </div>
+        <div class="subgroup">
+          <h3>Calzoni</h3>
+          <div class="item"><div class="row"><div class="name">Luciano</div><div class="price">€ 12,00</div></div><div class="desc">Mozzarella, broccoli e salsiccia</div></div>
+          <div class="item"><div class="row"><div class="name">Serafina</div><div class="price">€ 11,00</div></div><div class="desc">Pomodoro, mozzarella e salame piccante</div></div>
+          <div class="item"><div class="row"><div class="name">Maria Antonietta</div><div class="price">€ 11,00</div></div><div class="desc">Pomodoro, mozzarella e prosciutto cotto</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="burger">
+      <div class="section-head"><div class="kicker">5</div><h2>Hamburger By Cielo</h2></div>
+      <div class="section-body">
+        <div class="item"><div class="row"><div class="name">Classico</div><div class="price">€ 13,00</div></div><div class="desc">Panino homemade di Alessandro Consiglio by Cielo Fco hamburger, pomodoro e insalata con patatine fritte</div></div>
+        <div class="item"><div class="row"><div class="name">Cheeseburger</div><div class="price">€ 13,00</div></div><div class="desc">Panino homemade di Alessandro Consiglio by Cielo Fco hamburger, cheddar e patatine fritte</div></div>
+        <div class="item"><div class="row"><div class="name">Il Gatto e la Volpe Burger</div><div class="price">€ 13,00</div></div><div class="desc">Panino homemade di Alessandro Consiglio by Cielo Fco hamburger, provola affumicata, peperoni con patatine fritte</div></div>
+        <div class="item"><div class="row"><div class="name">Wurstel e Patatine</div><div class="price">€ 12,00</div></div><div class="desc">Panino homemade di Alessandro Consiglio by Cielo Fco, wurstel e patatine fritte</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="primi">
+      <div class="section-head"><div class="kicker">6</div><h2>Primi, Secondi e Contorni</h2></div>
+      <div class="section-body grid-2">
+        <div class="subgroup">
+          <h3>I Primi Piatti</h3>
+          <div class="item"><div class="row"><div class="name">Pasta Patate e Provola</div><div class="price">€ 12,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Pasta all’Amatriciana</div><div class="price">€ 12,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Pasta alla Carbonara</div><div class="price">€ 12,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Pasta al Pomodoro</div><div class="price">€ 8,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Pasta in Bianco</div><div class="price">€ 7,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Piatto del Giorno dello Chef Natalia</div><div class="price">€ 12,00</div></div></div>
+        </div>
+        <div class="subgroup">
+          <h3>I Secondi Piatti</h3>
+          <div class="item"><div class="row"><div class="name">Hamburger (gr. 200 ca.)</div><div class="price">€ 12,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Picanha</div><div class="price">€ 20,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Bistecca (gr. 300 ca.)</div><div class="price">€ 22,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Filetto di Manzo (gr. 300 ca.)</div><div class="price">€ 22,00</div></div></div>
+          <div class="subgroup" style="border-top:none;padding-top:14px;margin-top:10px">
+            <h3>I Contorni</h3>
+            <div class="item"><div class="row"><div class="name">Scarola Ripassata, Olive e Capperi</div><div class="price">€ 4,50</div></div></div>
+            <div class="item"><div class="row"><div class="name">Broccoletti</div><div class="price">€ 4,50</div></div></div>
+            <div class="item"><div class="row"><div class="name">Patatine Sticks</div><div class="price">€ 4,00</div></div></div>
+            <div class="item"><div class="row"><div class="name">Patate al Forno</div><div class="price">€ 4,00</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dolci">
+      <div class="section-head"><div class="kicker">7</div><h2>Dolci e Caffè</h2></div>
+      <div class="section-body grid-2">
+        <div class="subgroup">
+          <h3>I Dolci</h3>
+          <div class="item"><div class="row"><div class="name">Tiramisù</div><div class="price">€ 6,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Panna Cotta</div><div class="price">€ 6,00</div></div><div class="desc">Con topping a scelta</div></div>
+          <div class="item"><div class="row"><div class="name">Pizza con la Nutella</div><div class="price">€ 6,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Zoccolette</div><div class="price">€ 6,00</div></div></div>
+        </div>
+        <div class="subgroup">
+          <h3>Il Nostro Caffè</h3>
+          <div class="item"><div class="row"><div class="name">Il Vero Caffè Napoletano</div><div class="price">€ 1,20</div></div></div>
+          <div class="item"><div class="row"><div class="name">Caffè Decaffeinato</div><div class="price">€ 1,40</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bibite">
+      <div class="section-head"><div class="kicker">8</div><h2>Bibite e Birre</h2></div>
+      <div class="section-body grid-2">
+        <div class="subgroup">
+          <h3>Le Acque</h3>
+          <div class="item"><div class="row"><div class="name">Acqua Electa Naturale</div><div class="price">€ 3,50</div></div><div class="desc">Cl. 75</div></div>
+          <div class="item"><div class="row"><div class="name">Acqua Nepi</div><div class="price">€ 3,50</div></div><div class="desc">Cl. 75</div></div>
+          <div class="item"><div class="row"><div class="name">Acqua San Pellegrino</div><div class="price">€ 4,00</div></div><div class="desc">Cl. 75</div></div>
+          <div class="subgroup" style="border-top:none;padding-top:14px;margin-top:10px">
+            <h3>Soft Drinks</h3>
+            <div class="item"><div class="row"><div class="name">Coca Cola Zero</div><div class="price">€ 3,00</div></div><div class="desc">Cl. 33</div></div>
+            <div class="item"><div class="row"><div class="name">Coca Cola</div><div class="price">€ 3,00</div></div><div class="desc">Cl. 33</div></div>
+            <div class="item"><div class="row"><div class="name">Coca Cola Bottiglia Grande</div><div class="price">€ 5,00</div></div></div>
+            <div class="item"><div class="row"><div class="name">Fanta</div><div class="price">€ 3,00</div></div><div class="desc">Cl. 33</div></div>
+          </div>
+        </div>
+        <div class="subgroup">
+          <h3>Le Birre alla Spina</h3>
+          <div class="dual-head"><span>Cl 20</span><span>Cl 40</span></div>
+          <div class="item"><div class="row"><div class="name">Ichnusa Non Filtrata</div><div class="dual-price"><span class="price">€ 3,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="item"><div class="row"><div class="name">Heineken</div><div class="dual-price"><span class="price">€ 3,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="item"><div class="row"><div class="name">Moretti Rossa</div><div class="dual-price"><span class="price">€ 4,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="item"><div class="row"><div class="name">Birra Guinness Draught 4.2%</div><div class="price">€ 5,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Birra Artigianale IPA Primo Fiumicino</div><div class="dual-price"><span class="price">€ 3,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="item"><div class="row"><div class="name">Birra Artigianale IPA Session Primo Fiumicino</div><div class="dual-price"><span class="price">€ 3,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="item"><div class="row"><div class="name">Birra Artigianale Lager Primo Fiumicino</div><div class="dual-price"><span class="price">€ 3,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="item"><div class="row"><div class="name">Birra Artigianale Rossa Primo Fiumicino</div><div class="dual-price"><span class="price">€ 3,50</span><span class="price">€ 5,50</span></div></div></div>
+          <div class="subgroup" style="border-top:none;padding-top:14px;margin-top:10px">
+            <h3>Le Nostre Birre</h3>
+            <div class="item"><div class="row"><div class="name">Heineken 33 cl</div><div class="price">€ 3,50</div></div></div>
+            <div class="item"><div class="row"><div class="name">Heineken 66 cl</div><div class="price">€ 6,00</div></div></div>
+            <div class="item"><div class="row"><div class="name">Birra Guinness Draught 4.2%</div><div class="price">€ 5,00</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="amari">
+      <div class="section-head"><div class="kicker">9</div><h2>Amari e Digestivi</h2></div>
+      <div class="section-body">
+        <div class="item"><div class="row"><div class="name">Amaro Jagermeister</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro del Capo</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Lucano</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Milone “Miglior Amaro al Mondo 2022”</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Milone Nero “Miglior Amaro al Mondo 2022”</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Jefferson</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Formidabile</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Braulio</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaro Petrus</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Amaretto di Saronno</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Liquore Centerbe</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Sambuca</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Liquore Limoncello</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Grappa Bianca</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Grappa Barricata</div><div class="price">€ 4,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Ouzo</div><div class="price">€ 5,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Jack Daniel’s</div><div class="price">€ 5,00</div></div></div>
+        <div class="item"><div class="row"><div class="name">Jim Beam Bourbon Whiskey</div><div class="price">€ 5,50</div></div></div>
+        <div class="item"><div class="row"><div class="name">Rhum Diplomatico</div><div class="price">€ 6,00</div></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="vini">
+      <div class="section-head"><div class="kicker">10</div><h2>Carta dei Vini + Tutti i Vini</h2></div>
+      <div class="section-body">
+        <div class="wine-intro">
+          <div class="wine-title">La Carta<br>dei Vini</div>
+          <p class="wine-copy">Questa selezione vuole essere un riassunto, dinamico ed in continuo divenire, del nostro viaggio nel Mondo Vino. Un viaggio fatto di colori, profumi e sapori, ma soprattutto di incontri, uomini e storie che si intrecciano in un territorio.</p>
+          <p class="wine-copy">Un viaggio che ci piacerebbe raccontarvi di bicchiere in bicchiere.</p>
+          <div class="legend">Vino Biologico · D.O.C.G. Denominazione di Origine Controllata e Garantita · D.O.P. Denominazione di Origine Protetta · D.O.C. Denominazione di Origine Controllata · I.G.T. Indicazione Geografica Tipica · I.G.P. Indicazione di Origine Protetta</div>
+          <div class="footnote">La selezionata produzione di alcune aziende non consente la continua disponibilità dei vini scelti, a causa del normale esaurimento delle scorte. I nostri gentili ospiti sono cortesemente invitati a gradire la presentazione di eventuali altri vini di analoga qualità.</div>
+        </div>
+
+        <div class="subgroup"><h3>Le Nostre Bolle</h3>
+          <div class="item"><div class="row"><div class="name">Kurner Brut Millesimato</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Gran Cuvée Extra Dry</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Prosecco</div><div class="price">€ 18,00</div></div><div class="desc">Cl 75</div></div>
+        </div>
+
+        <div class="subgroup"><h3>I Nostri Bianchi</h3>
+          <div class="item"><div class="row"><div class="name">Falanghina Campania</div><div class="price">€ 15,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Falanghina di Puglia</div><div class="price">€ 15,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Gewuztraminer</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Traminer</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Ribolla Gialla IGT Tenuta Maccan</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Vermentino di Sardegna</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Greco Lazio</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Le Pratelle Bianco</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Bellone Lazio</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Pecorino d’Abruzzo</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Chardonnay Lazio</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Chardonnay Friuli Arlanch</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Ribolla Gradis’Ciutta</div><div class="price">€ 16,00</div></div><div class="desc">Cl 75</div></div>
+        </div>
+
+        <div class="subgroup"><h3>I Nostri Rosati</h3>
+          <div class="item"><div class="row"><div class="name">Tramin Lagrein Rosé</div><div class="price">€ 15,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Rosa del Golfo Salento</div><div class="price">€ 18,00</div></div></div>
+        </div>
+
+        <div class="subgroup"><h3>I Nostri Rossi</h3>
+          <div class="item"><div class="row"><div class="name">Aglianico</div><div class="price">€ 15,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Cesanese Lazio</div><div class="price">€ 15,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Merlot</div><div class="price">€ 15,00</div></div></div>
+          <div class="item"><div class="row"><div class="name">Chianti</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+          <div class="item"><div class="row"><div class="name">Le Pratelle Rosso Lazio</div><div class="price">€ 15,00</div></div><div class="desc">Cl 75</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-space"></div>
+  </main>
+</div>
+</body>
+</html>
